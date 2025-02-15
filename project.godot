@@ -14,3 +14,11 @@ config/name="Video-Sample"
 run/main_scene="res://2025-02/Making-Stairs/Ramp-Versus-Starirs-Comparison.tscn"
 config/features=PackedStringArray("4.2", "Forward Plus")
 config/icon="res://icon.svg"
+
+[display]
+
+window/size/viewport_width=3840
+window/size/viewport_height=2160
+window/size/resizable=false
+window/stretch/mode="viewport"
+window/stretch/scale=0.5

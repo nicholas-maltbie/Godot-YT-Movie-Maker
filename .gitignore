@@ -2,4 +2,4 @@
 .godot/
 
 # Video files
-.avi
+*.avi
