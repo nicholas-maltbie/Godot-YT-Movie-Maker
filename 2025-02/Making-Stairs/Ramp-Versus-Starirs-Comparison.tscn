@@ -164,6 +164,104 @@ linear_velocity = Vector3(0, 0, -2)
 transform = Transform3D(-0.178976, -0.77959, -0.600173, 0.222785, -0.626291, 0.747079, -0.958298, 0, 0.285772, -0.1745, 0.536393, -0.0389254)
 linear_velocity = Vector3(0, 0, -2)
 
+[node name="RollingBalls" type="Node3D" parent="Stairs/RollingBalls"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.484033, 2.06133, 3.59664)
+
+[node name="Ball" parent="Stairs/RollingBalls/RollingBalls" instance=ExtResource("4_7qhdi")]
+linear_velocity = Vector3(0, 0, -2)
+
+[node name="Ball2" parent="Stairs/RollingBalls/RollingBalls" instance=ExtResource("4_7qhdi")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.140477, 0.181498, 0)
+linear_velocity = Vector3(0, 0, -2)
+
+[node name="Ball3" parent="Stairs/RollingBalls/RollingBalls" instance=ExtResource("4_7qhdi")]
+transform = Transform3D(0.285772, 0, 0.958298, 0, 1, 0, -0.958298, 0, 0.285772, 0.138187, 0.230047, -0.0673096)
+linear_velocity = Vector3(0, 0, -2)
+
+[node name="Ball4" parent="Stairs/RollingBalls/RollingBalls" instance=ExtResource("4_7qhdi")]
+transform = Transform3D(0.285772, 0, 0.958298, 0, 1, 0, -0.958298, 0, 0.285772, 0.0980427, 0.264079, 0.0673096)
+linear_velocity = Vector3(0, 0, -2)
+
+[node name="Ball5" parent="Stairs/RollingBalls/RollingBalls" instance=ExtResource("4_7qhdi")]
+transform = Transform3D(-0.626291, -0.779589, 0, 0.779589, -0.626291, 0, 0, 0, 1, -0.0221859, 0.223627, -0.106235)
+linear_velocity = Vector3(0, 0, -2)
+
+[node name="Ball6" parent="Stairs/RollingBalls/RollingBalls" instance=ExtResource("4_7qhdi")]
+transform = Transform3D(-0.626291, -0.779589, 0, 0.779589, -0.626291, 0, 0, 0, 1, 0.0392628, 0.0927985, -0.106235)
+linear_velocity = Vector3(0, 0, -2)
+
+[node name="Ball7" parent="Stairs/RollingBalls/RollingBalls" instance=ExtResource("4_7qhdi")]
+transform = Transform3D(-0.178976, -0.77959, -0.600173, 0.222785, -0.626291, 0.747079, -0.958298, 0, 0.285772, -0.173111, 0.279637, -0.173545)
+linear_velocity = Vector3(0, 0, -2)
+
+[node name="Ball8" parent="Stairs/RollingBalls/RollingBalls" instance=ExtResource("4_7qhdi")]
+transform = Transform3D(-0.178976, -0.77959, -0.600173, 0.222785, -0.626291, 0.747079, -0.958298, 0, 0.285772, -0.1745, 0.227026, -0.0389254)
+linear_velocity = Vector3(0, 0, -2)
+
+[node name="Ball9" parent="Stairs/RollingBalls/RollingBalls" instance=ExtResource("4_7qhdi")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.297917, 0)
+linear_velocity = Vector3(0, 0, -2)
+
+[node name="Ball10" parent="Stairs/RollingBalls/RollingBalls" instance=ExtResource("4_7qhdi")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.140477, 0.331949, 0)
+linear_velocity = Vector3(0, 0, -2)
+
+[node name="Ball11" parent="Stairs/RollingBalls/RollingBalls" instance=ExtResource("4_7qhdi")]
+transform = Transform3D(0.285772, 0, 0.958298, 0, 1, 0, -0.958298, 0, 0.285772, 0.138187, 0.380498, -0.0673096)
+linear_velocity = Vector3(0, 0, -2)
+
+[node name="Ball12" parent="Stairs/RollingBalls/RollingBalls" instance=ExtResource("4_7qhdi")]
+transform = Transform3D(0.285772, 0, 0.958298, 0, 1, 0, -0.958298, 0, 0.285772, 0.0980427, 0.41453, 0.0673096)
+linear_velocity = Vector3(0, 0, -2)
+
+[node name="Ball13" parent="Stairs/RollingBalls/RollingBalls" instance=ExtResource("4_7qhdi")]
+transform = Transform3D(-0.626291, -0.779589, 0, 0.779589, -0.626291, 0, 0, 0, 1, -0.0221859, 0.374078, -0.106235)
+linear_velocity = Vector3(0, 0, -2)
+
+[node name="Ball14" parent="Stairs/RollingBalls/RollingBalls" instance=ExtResource("4_7qhdi")]
+transform = Transform3D(-0.626291, -0.779589, 0, 0.779589, -0.626291, 0, 0, 0, 1, 0.0392628, 0.243249, -0.106235)
+linear_velocity = Vector3(0, 0, -2)
+
+[node name="Ball15" parent="Stairs/RollingBalls/RollingBalls" instance=ExtResource("4_7qhdi")]
+transform = Transform3D(-0.178976, -0.77959, -0.600173, 0.222785, -0.626291, 0.747079, -0.958298, 0, 0.285772, -0.173111, 0.430088, -0.173545)
+linear_velocity = Vector3(0, 0, -2)
+
+[node name="Ball16" parent="Stairs/RollingBalls/RollingBalls" instance=ExtResource("4_7qhdi")]
+transform = Transform3D(-0.178976, -0.77959, -0.600173, 0.222785, -0.626291, 0.747079, -0.958298, 0, 0.285772, -0.1745, 0.377477, -0.0389254)
+linear_velocity = Vector3(0, 0, -2)
+
+[node name="Ball17" parent="Stairs/RollingBalls/RollingBalls" instance=ExtResource("4_7qhdi")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.456833, 0)
+linear_velocity = Vector3(0, 0, -2)
+
+[node name="Ball18" parent="Stairs/RollingBalls/RollingBalls" instance=ExtResource("4_7qhdi")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.140477, 0.490865, 0)
+linear_velocity = Vector3(0, 0, -2)
+
+[node name="Ball19" parent="Stairs/RollingBalls/RollingBalls" instance=ExtResource("4_7qhdi")]
+transform = Transform3D(0.285772, 0, 0.958298, 0, 1, 0, -0.958298, 0, 0.285772, 0.138187, 0.539414, -0.0673096)
+linear_velocity = Vector3(0, 0, -2)
+
+[node name="Ball20" parent="Stairs/RollingBalls/RollingBalls" instance=ExtResource("4_7qhdi")]
+transform = Transform3D(0.285772, 0, 0.958298, 0, 1, 0, -0.958298, 0, 0.285772, 0.0980427, 0.573446, 0.0673096)
+linear_velocity = Vector3(0, 0, -2)
+
+[node name="Ball21" parent="Stairs/RollingBalls/RollingBalls" instance=ExtResource("4_7qhdi")]
+transform = Transform3D(-0.626291, -0.779589, 0, 0.779589, -0.626291, 0, 0, 0, 1, -0.0221859, 0.532994, -0.106235)
+linear_velocity = Vector3(0, 0, -2)
+
+[node name="Ball22" parent="Stairs/RollingBalls/RollingBalls" instance=ExtResource("4_7qhdi")]
+transform = Transform3D(-0.626291, -0.779589, 0, 0.779589, -0.626291, 0, 0, 0, 1, 0.0392628, 0.402165, -0.106235)
+linear_velocity = Vector3(0, 0, -2)
+
+[node name="Ball23" parent="Stairs/RollingBalls/RollingBalls" instance=ExtResource("4_7qhdi")]
+transform = Transform3D(-0.178976, -0.77959, -0.600173, 0.222785, -0.626291, 0.747079, -0.958298, 0, 0.285772, -0.173111, 0.589004, -0.173545)
+linear_velocity = Vector3(0, 0, -2)
+
+[node name="Ball24" parent="Stairs/RollingBalls/RollingBalls" instance=ExtResource("4_7qhdi")]
+transform = Transform3D(-0.178976, -0.77959, -0.600173, 0.222785, -0.626291, 0.747079, -0.958298, 0, 0.285772, -0.1745, 0.536393, -0.0389254)
+linear_velocity = Vector3(0, 0, -2)
+
 [node name="ConvexStairs" type="Node3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.5, 1, 0)
 

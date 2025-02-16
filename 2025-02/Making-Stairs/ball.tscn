@@ -11,6 +11,8 @@ bounce = 0.1
 [node name="Ball" type="RigidBody3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.147466, 0)
 physics_material_override = SubResource("PhysicsMaterial_wf5r0")
+gravity_scale = 0.5
+continuous_cd = true
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 0, 0, 0)

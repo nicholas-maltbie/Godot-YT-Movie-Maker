@@ -20,5 +20,7 @@ config/icon="res://icon.svg"
 window/size/viewport_width=3840
 window/size/viewport_height=2160
 window/size/resizable=false
-window/stretch/mode="viewport"
-window/stretch/scale=0.5
+
+[rendering]
+
+lights_and_shadows/directional_shadow/soft_shadow_filter_quality=4
