@@ -1,0 +1,303 @@
+[gd_scene load_steps=13 format=3 uid="uid://btcboi3ppy2i3"]
+
+[ext_resource type="PackedScene" uid="uid://dj26sacnhty4r" path="res://addons/devblocks/blocks/basic_block.tscn" id="1_pkn6r"]
+[ext_resource type="Script" path="res://2025-02/Making-Stairs/Scripts/stairs.gd" id="2_mpbly"]
+[ext_resource type="Texture2D" uid="uid://bwm3chclmoo0x" path="res://addons/devblocks/textures/dark/texture_01.png" id="3_ovskf"]
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_5trv2"]
+
+[sub_resource type="Animation" id="Animation_emsl1"]
+resource_name = "stairs_growt"
+length = 5.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:step_height")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 0.2]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:step_depth")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.35, 0.35]
+}
+
+[sub_resource type="Animation" id="Animation_v2grt"]
+resource_name = "stairs_growth_2"
+length = 5.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:step_height")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 0.15]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:step_depth")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.35, 0.3]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".:num_step")
+tracks/2/interp = 2
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [25, 60]
+}
+
+[sub_resource type="Animation" id="Animation_r8j0s"]
+resource_name = "stairs_growth_3"
+length = 5.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:step_height")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 0.35]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:step_depth")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.35, 0.45]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".:num_step")
+tracks/2/interp = 2
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [25, 40]
+}
+
+[sub_resource type="Animation" id="Animation_t7231"]
+resource_name = "stairs_growth_4"
+length = 5.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:step_height")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 0.25]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:step_depth")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.35, 0.65]
+}
+
+[sub_resource type="Animation" id="Animation_q54vy"]
+resource_name = "stairs_growth_5"
+length = 5.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:step_height")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 0.05]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:step_depth")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(5),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.15]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".:num_step")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0.1, 5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [40, 120]
+}
+
+[sub_resource type="Animation" id="Animation_5m817"]
+resource_name = "stairs_growth_6"
+length = 5.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:step_height")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 0.45]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:step_depth")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.35, 2.0]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".:num_step")
+tracks/2/interp = 2
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [25, 40]
+}
+
+[sub_resource type="Animation" id="Animation_v16qy"]
+resource_name = "single_staircase_build"
+length = 5.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:step_height")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 0.2]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:step_depth")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.1, 0.35]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".:num_step")
+tracks/2/interp = 2
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 3.5, 5),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [5, 35, 120]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_75vac"]
+_data = {
+"single_staircase_build": SubResource("Animation_v16qy"),
+"stairs_growth": SubResource("Animation_emsl1"),
+"stairs_growth_2": SubResource("Animation_v2grt"),
+"stairs_growth_3": SubResource("Animation_r8j0s"),
+"stairs_growth_4": SubResource("Animation_t7231"),
+"stairs_growth_5": SubResource("Animation_q54vy"),
+"stairs_growth_6": SubResource("Animation_5m817")
+}
+
+[node name="Ramp-versus-starirs-comparison" type="Node3D"]
+metadata/movie_file = "single_staircase_growth.avi"
+
+[node name="Floor" parent="." instance=ExtResource("1_pkn6r")]
+transform = Transform3D(100, 0, 0, 0, 1, 0, 0, 0, 100, 0, 0.5, 0)
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(-0.782152, -0.387881, 0.487634, 0, 0.782608, 0.622515, -0.623088, 0.486901, -0.612119, 3.25, 4.18437, -0.22857)
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(0.721411, -0.0927313, 0.686271, -0.683013, -0.258818, 0.683013, 0.114283, -0.961464, -0.250051, 0, 0, 0)
+
+[node name="Stairs" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 1, 0)
+script = ExtResource("2_mpbly")
+num_step = 5
+step_height = 0.0
+step_depth = 0.1
+step_width = 1.5
+save_mesh = false
+texture = ExtResource("3_ovskf")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Stairs"]
+libraries = {
+"": SubResource("AnimationLibrary_5trv2"),
+"Stairs": SubResource("AnimationLibrary_75vac")
+}
+autoplay = "Stairs/single_staircase_build"
