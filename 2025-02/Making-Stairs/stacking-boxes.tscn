@@ -1,0 +1,45 @@
+[gd_scene load_steps=2 format=3 uid="uid://cw1pywiy4jhns"]
+
+[ext_resource type="PackedScene" uid="uid://dj26sacnhty4r" path="res://addons/devblocks/blocks/basic_block.tscn" id="1_8m5a5"]
+
+[node name="spinning-staircase" type="Node3D"]
+
+[node name="Floor" parent="." instance=ExtResource("1_8m5a5")]
+transform = Transform3D(100, 0, 0, 0, 1, 0, 0, 0, 100, 0, 0.5, 0)
+block_style = 6
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(-0.851049, 0, -0.525086, 0, 1, 0, 0.525086, 0, -0.851049, -1.83755, 2.63597, -4.36015)
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(-0.158017, -0.860608, -0.484133, -0.683013, -0.258818, 0.683013, -0.713109, 0.438597, -0.546908, 0.000202537, 0.00782371, -0.4096)
+
+[node name="BasicBlock" parent="." instance=ExtResource("1_8m5a5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+
+[node name="BasicBlock2" parent="." instance=ExtResource("1_8m5a5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.2, 0.2)
+
+[node name="BasicBlock3" parent="." instance=ExtResource("1_8m5a5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.4, 0.4)
+
+[node name="BasicBlock4" parent="." instance=ExtResource("1_8m5a5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.6, 0.6)
+
+[node name="BasicBlock5" parent="." instance=ExtResource("1_8m5a5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.000111103, 1.80262, 0.799957)
+
+[node name="BasicBlock6" parent="." instance=ExtResource("1_8m5a5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.5, 1, 0)
+
+[node name="BasicBlock7" parent="." instance=ExtResource("1_8m5a5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.5, 1.1, 0.3)
+
+[node name="BasicBlock8" parent="." instance=ExtResource("1_8m5a5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.5, 1.2, 0.6)
+
+[node name="BasicBlock9" parent="." instance=ExtResource("1_8m5a5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.5, 1.3, 0.9)
+
+[node name="BasicBlock10" parent="." instance=ExtResource("1_8m5a5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.50179, 1.40637, 1.20124)
