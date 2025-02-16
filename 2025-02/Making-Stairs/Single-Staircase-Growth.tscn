@@ -273,7 +273,7 @@ _data = {
 "stairs_growth_6": SubResource("Animation_5m817")
 }
 
-[node name="Ramp-versus-starirs-comparison" type="Node3D"]
+[node name="single-staircase-growth" type="Node3D"]
 metadata/movie_file = "single_staircase_growth.avi"
 
 [node name="Floor" parent="." instance=ExtResource("1_pkn6r")]

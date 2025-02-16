@@ -1,0 +1,65 @@
+[gd_scene load_steps=6 format=3 uid="uid://0rs8n1ohfdav"]
+
+[ext_resource type="PackedScene" uid="uid://dj26sacnhty4r" path="res://addons/devblocks/blocks/basic_block.tscn" id="1_xiogn"]
+[ext_resource type="Script" path="res://2025-02/Making-Stairs/Scripts/step_highlight.gd" id="2_iy45u"]
+[ext_resource type="Texture2D" uid="uid://bwm3chclmoo0x" path="res://addons/devblocks/textures/dark/texture_01.png" id="3_vi3p5"]
+
+[sub_resource type="Animation" id="Animation_ir8uc"]
+resource_name = "stairs_depth_height_strech"
+length = 8.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:step_height")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 2, 4),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [0.1, 0.15, 0.1]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:step_depth")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(4, 6, 8),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [0.25, 0.35, 0.25]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_1tdxe"]
+_data = {
+"stairs_depth_height_strech": SubResource("Animation_ir8uc")
+}
+
+[node name="highlight-step-width-and-height" type="Node3D"]
+metadata/movie_file = "tmp/highlight.png"
+
+[node name="Floor" parent="." instance=ExtResource("1_xiogn")]
+transform = Transform3D(100, 0, 0, 0, 1, 0, 0, 0, 100, 0, 0.5, 0)
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 0.73015, 1.12654, 0.115676)
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(-0.158017, -0.860608, -0.484133, -0.683013, -0.258818, 0.683013, -0.713109, 0.438597, -0.546908, 0.000202537, 0.00782371, -0.4096)
+
+[node name="Stairs" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 1, 0)
+script = ExtResource("2_iy45u")
+num_step = 5
+step_height = 0.1
+step_depth = 0.25
+save_mesh = false
+texture = ExtResource("3_vi3p5")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Stairs"]
+libraries = {
+"": SubResource("AnimationLibrary_1tdxe")
+}
+autoplay = "stairs_depth_height_strech"
