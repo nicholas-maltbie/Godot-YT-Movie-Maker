@@ -1,0 +1,542 @@
+[gd_scene load_steps=6 format=3 uid="uid://byt7meew1hqae"]
+
+[ext_resource type="PackedScene" uid="uid://dj26sacnhty4r" path="res://addons/devblocks/blocks/basic_block.tscn" id="1_n6rxt"]
+[ext_resource type="Script" path="res://2025-02/Making-Stairs/Scripts/stairs.gd" id="2_er1g4"]
+[ext_resource type="Texture2D" uid="uid://bwm3chclmoo0x" path="res://addons/devblocks/textures/dark/texture_01.png" id="3_drq24"]
+
+[sub_resource type="Animation" id="Animation_ir8uc"]
+resource_name = "stairs_depth_height_strech"
+length = 4.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:step_height")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 0.2]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_1tdxe"]
+_data = {
+"stairs_depth_height_strech": SubResource("Animation_ir8uc")
+}
+
+[node name="lots-of-staircases" type="Node3D"]
+
+[node name="Floor" parent="." instance=ExtResource("1_n6rxt")]
+transform = Transform3D(100, 0, 0, 0, 1, 0, 0, 0, 100, 0, 0.5, 0)
+block_style = 6
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(-0.615579, 0.269538, -0.740548, 0, 0.939693, 0.34202, 0.788075, 0.21054, -0.578455, -2.04624, 4.17692, -1.00429)
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(-0.158017, -0.860608, -0.484133, -0.683013, -0.258818, 0.683013, -0.713109, 0.438597, -0.546908, 0.000202537, 0.00782371, -0.4096)
+
+[node name="Stairs" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17, 1, 0)
+script = ExtResource("2_er1g4")
+num_step = 13
+step_height = 0.0
+save_mesh = false
+texture = ExtResource("3_drq24")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Stairs"]
+libraries = {
+"": SubResource("AnimationLibrary_1tdxe")
+}
+autoplay = "stairs_depth_height_strech"
+
+[node name="Stairs2" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 19, 1, 0)
+script = ExtResource("2_er1g4")
+num_step = 13
+step_height = 0.0
+save_mesh = false
+texture = ExtResource("3_drq24")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Stairs2"]
+libraries = {
+"": SubResource("AnimationLibrary_1tdxe")
+}
+autoplay = "stairs_depth_height_strech"
+
+[node name="Stairs3" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13, 1, 0)
+script = ExtResource("2_er1g4")
+num_step = 13
+step_height = 0.0
+save_mesh = false
+texture = ExtResource("3_drq24")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Stairs3"]
+libraries = {
+"": SubResource("AnimationLibrary_1tdxe")
+}
+autoplay = "stairs_depth_height_strech"
+
+[node name="Stairs4" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15, 1, 0)
+script = ExtResource("2_er1g4")
+num_step = 13
+step_height = 0.0
+save_mesh = false
+texture = ExtResource("3_drq24")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Stairs4"]
+libraries = {
+"": SubResource("AnimationLibrary_1tdxe")
+}
+autoplay = "stairs_depth_height_strech"
+
+[node name="Stairs5" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9, 1, 0)
+script = ExtResource("2_er1g4")
+num_step = 13
+step_height = 0.0
+save_mesh = false
+texture = ExtResource("3_drq24")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Stairs5"]
+libraries = {
+"": SubResource("AnimationLibrary_1tdxe")
+}
+autoplay = "stairs_depth_height_strech"
+
+[node name="Stairs6" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11, 1, 0)
+script = ExtResource("2_er1g4")
+num_step = 13
+step_height = 0.0
+save_mesh = false
+texture = ExtResource("3_drq24")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Stairs6"]
+libraries = {
+"": SubResource("AnimationLibrary_1tdxe")
+}
+autoplay = "stairs_depth_height_strech"
+
+[node name="Stairs7" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 1, 0)
+script = ExtResource("2_er1g4")
+num_step = 13
+step_height = 0.0
+save_mesh = false
+texture = ExtResource("3_drq24")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Stairs7"]
+libraries = {
+"": SubResource("AnimationLibrary_1tdxe")
+}
+autoplay = "stairs_depth_height_strech"
+
+[node name="Stairs8" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7, 1, 0)
+script = ExtResource("2_er1g4")
+num_step = 13
+step_height = 0.0
+save_mesh = false
+texture = ExtResource("3_drq24")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Stairs8"]
+libraries = {
+"": SubResource("AnimationLibrary_1tdxe")
+}
+autoplay = "stairs_depth_height_strech"
+
+[node name="Stairs9" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 1, 0)
+script = ExtResource("2_er1g4")
+num_step = 13
+step_height = 0.0
+save_mesh = false
+texture = ExtResource("3_drq24")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Stairs9"]
+libraries = {
+"": SubResource("AnimationLibrary_1tdxe")
+}
+autoplay = "stairs_depth_height_strech"
+
+[node name="Stairs10" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 1, 0)
+script = ExtResource("2_er1g4")
+num_step = 13
+step_height = 0.0
+save_mesh = false
+texture = ExtResource("3_drq24")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Stairs10"]
+libraries = {
+"": SubResource("AnimationLibrary_1tdxe")
+}
+autoplay = "stairs_depth_height_strech"
+
+[node name="Stairs11" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 1, 0)
+script = ExtResource("2_er1g4")
+num_step = 13
+step_height = 0.0
+save_mesh = false
+texture = ExtResource("3_drq24")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Stairs11"]
+libraries = {
+"": SubResource("AnimationLibrary_1tdxe")
+}
+autoplay = "stairs_depth_height_strech"
+
+[node name="Stairs12" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 1, 0)
+script = ExtResource("2_er1g4")
+num_step = 13
+step_height = 0.0
+save_mesh = false
+texture = ExtResource("3_drq24")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Stairs12"]
+libraries = {
+"": SubResource("AnimationLibrary_1tdxe")
+}
+autoplay = "stairs_depth_height_strech"
+
+[node name="Stairs13" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17, 1, 6)
+script = ExtResource("2_er1g4")
+num_step = 13
+step_height = 0.0
+save_mesh = false
+texture = ExtResource("3_drq24")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Stairs13"]
+libraries = {
+"": SubResource("AnimationLibrary_1tdxe")
+}
+autoplay = "stairs_depth_height_strech"
+
+[node name="Stairs14" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 19, 1, 6)
+script = ExtResource("2_er1g4")
+num_step = 13
+step_height = 0.0
+save_mesh = false
+texture = ExtResource("3_drq24")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Stairs14"]
+libraries = {
+"": SubResource("AnimationLibrary_1tdxe")
+}
+autoplay = "stairs_depth_height_strech"
+
+[node name="Stairs15" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13, 1, 6)
+script = ExtResource("2_er1g4")
+num_step = 13
+step_height = 0.0
+save_mesh = false
+texture = ExtResource("3_drq24")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Stairs15"]
+libraries = {
+"": SubResource("AnimationLibrary_1tdxe")
+}
+autoplay = "stairs_depth_height_strech"
+
+[node name="Stairs16" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15, 1, 6)
+script = ExtResource("2_er1g4")
+num_step = 13
+step_height = 0.0
+save_mesh = false
+texture = ExtResource("3_drq24")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Stairs16"]
+libraries = {
+"": SubResource("AnimationLibrary_1tdxe")
+}
+autoplay = "stairs_depth_height_strech"
+
+[node name="Stairs17" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9, 1, 6)
+script = ExtResource("2_er1g4")
+num_step = 13
+step_height = 0.0
+save_mesh = false
+texture = ExtResource("3_drq24")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Stairs17"]
+libraries = {
+"": SubResource("AnimationLibrary_1tdxe")
+}
+autoplay = "stairs_depth_height_strech"
+
+[node name="Stairs18" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11, 1, 6)
+script = ExtResource("2_er1g4")
+num_step = 13
+step_height = 0.0
+save_mesh = false
+texture = ExtResource("3_drq24")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Stairs18"]
+libraries = {
+"": SubResource("AnimationLibrary_1tdxe")
+}
+autoplay = "stairs_depth_height_strech"
+
+[node name="Stairs19" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 1, 6)
+script = ExtResource("2_er1g4")
+num_step = 13
+step_height = 0.0
+save_mesh = false
+texture = ExtResource("3_drq24")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Stairs19"]
+libraries = {
+"": SubResource("AnimationLibrary_1tdxe")
+}
+autoplay = "stairs_depth_height_strech"
+
+[node name="Stairs20" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7, 1, 6)
+script = ExtResource("2_er1g4")
+num_step = 13
+step_height = 0.0
+save_mesh = false
+texture = ExtResource("3_drq24")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Stairs20"]
+libraries = {
+"": SubResource("AnimationLibrary_1tdxe")
+}
+autoplay = "stairs_depth_height_strech"
+
+[node name="Stairs21" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 1, 6)
+script = ExtResource("2_er1g4")
+num_step = 13
+step_height = 0.0
+save_mesh = false
+texture = ExtResource("3_drq24")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Stairs21"]
+libraries = {
+"": SubResource("AnimationLibrary_1tdxe")
+}
+autoplay = "stairs_depth_height_strech"
+
+[node name="Stairs22" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 1, 6)
+script = ExtResource("2_er1g4")
+num_step = 13
+step_height = 0.0
+save_mesh = false
+texture = ExtResource("3_drq24")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Stairs22"]
+libraries = {
+"": SubResource("AnimationLibrary_1tdxe")
+}
+autoplay = "stairs_depth_height_strech"
+
+[node name="Stairs23" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 1, 6)
+script = ExtResource("2_er1g4")
+num_step = 13
+step_height = 0.0
+save_mesh = false
+texture = ExtResource("3_drq24")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Stairs23"]
+libraries = {
+"": SubResource("AnimationLibrary_1tdxe")
+}
+autoplay = "stairs_depth_height_strech"
+
+[node name="Stairs24" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 1, 6)
+script = ExtResource("2_er1g4")
+num_step = 13
+step_height = 0.0
+save_mesh = false
+texture = ExtResource("3_drq24")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Stairs24"]
+libraries = {
+"": SubResource("AnimationLibrary_1tdxe")
+}
+autoplay = "stairs_depth_height_strech"
+
+[node name="Stairs25" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17, 1, -6)
+script = ExtResource("2_er1g4")
+num_step = 13
+step_height = 0.0
+save_mesh = false
+texture = ExtResource("3_drq24")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Stairs25"]
+libraries = {
+"": SubResource("AnimationLibrary_1tdxe")
+}
+autoplay = "stairs_depth_height_strech"
+
+[node name="Stairs26" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 19, 1, -6)
+script = ExtResource("2_er1g4")
+num_step = 13
+step_height = 0.0
+save_mesh = false
+texture = ExtResource("3_drq24")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Stairs26"]
+libraries = {
+"": SubResource("AnimationLibrary_1tdxe")
+}
+autoplay = "stairs_depth_height_strech"
+
+[node name="Stairs27" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13, 1, -6)
+script = ExtResource("2_er1g4")
+num_step = 13
+step_height = 0.0
+save_mesh = false
+texture = ExtResource("3_drq24")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Stairs27"]
+libraries = {
+"": SubResource("AnimationLibrary_1tdxe")
+}
+autoplay = "stairs_depth_height_strech"
+
+[node name="Stairs28" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15, 1, -6)
+script = ExtResource("2_er1g4")
+num_step = 13
+step_height = 0.0
+save_mesh = false
+texture = ExtResource("3_drq24")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Stairs28"]
+libraries = {
+"": SubResource("AnimationLibrary_1tdxe")
+}
+autoplay = "stairs_depth_height_strech"
+
+[node name="Stairs29" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9, 1, -6)
+script = ExtResource("2_er1g4")
+num_step = 13
+step_height = 0.0
+save_mesh = false
+texture = ExtResource("3_drq24")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Stairs29"]
+libraries = {
+"": SubResource("AnimationLibrary_1tdxe")
+}
+autoplay = "stairs_depth_height_strech"
+
+[node name="Stairs30" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11, 1, -6)
+script = ExtResource("2_er1g4")
+num_step = 13
+step_height = 0.0
+save_mesh = false
+texture = ExtResource("3_drq24")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Stairs30"]
+libraries = {
+"": SubResource("AnimationLibrary_1tdxe")
+}
+autoplay = "stairs_depth_height_strech"
+
+[node name="Stairs31" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 1, -6)
+script = ExtResource("2_er1g4")
+num_step = 13
+step_height = 0.0
+save_mesh = false
+texture = ExtResource("3_drq24")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Stairs31"]
+libraries = {
+"": SubResource("AnimationLibrary_1tdxe")
+}
+autoplay = "stairs_depth_height_strech"
+
+[node name="Stairs32" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7, 1, -6)
+script = ExtResource("2_er1g4")
+num_step = 13
+step_height = 0.0
+save_mesh = false
+texture = ExtResource("3_drq24")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Stairs32"]
+libraries = {
+"": SubResource("AnimationLibrary_1tdxe")
+}
+autoplay = "stairs_depth_height_strech"
+
+[node name="Stairs33" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 1, -6)
+script = ExtResource("2_er1g4")
+num_step = 13
+step_height = 0.0
+save_mesh = false
+texture = ExtResource("3_drq24")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Stairs33"]
+libraries = {
+"": SubResource("AnimationLibrary_1tdxe")
+}
+autoplay = "stairs_depth_height_strech"
+
+[node name="Stairs34" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 1, -6)
+script = ExtResource("2_er1g4")
+num_step = 13
+step_height = 0.0
+save_mesh = false
+texture = ExtResource("3_drq24")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Stairs34"]
+libraries = {
+"": SubResource("AnimationLibrary_1tdxe")
+}
+autoplay = "stairs_depth_height_strech"
+
+[node name="Stairs35" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 1, -6)
+script = ExtResource("2_er1g4")
+num_step = 13
+step_height = 0.0
+save_mesh = false
+texture = ExtResource("3_drq24")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Stairs35"]
+libraries = {
+"": SubResource("AnimationLibrary_1tdxe")
+}
+autoplay = "stairs_depth_height_strech"
+
+[node name="Stairs36" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 1, -6)
+script = ExtResource("2_er1g4")
+num_step = 13
+step_height = 0.0
+save_mesh = false
+texture = ExtResource("3_drq24")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Stairs36"]
+libraries = {
+"": SubResource("AnimationLibrary_1tdxe")
+}
+autoplay = "stairs_depth_height_strech"
