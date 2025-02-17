@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://clousy4ev0pqu"]
 
-[ext_resource type="SphereMesh" uid="uid://coh1vt3k13iln" path="res://2025-02/Making-Stairs/sphere_shape.tres" id="1_4kriw"]
+[ext_resource type="SphereMesh" uid="uid://coh1vt3k13iln" path="res://2025-02/Making-Stairs/staircase/sphere_shape.tres" id="1_4kriw"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_wf5r0"]
 friction = 0.1

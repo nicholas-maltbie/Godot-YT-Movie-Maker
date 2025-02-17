@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://dlsuhmgi2ljbd"
-path="res://.godot/imported/example-mesh.glb-c931e3a072590093dcb3e79883d717d1.scn"
+path="res://.godot/imported/example-mesh.glb-e425d4dd978245acea17e42bdb26101b.scn"
 
 [deps]
 
-source_file="res://2025-02/Making-Stairs/example-mesh.glb"
-dest_files=["res://.godot/imported/example-mesh.glb-c931e3a072590093dcb3e79883d717d1.scn"]
+source_file="res://2025-02/Making-Stairs/staircase/example-mesh.glb"
+dest_files=["res://.godot/imported/example-mesh.glb-e425d4dd978245acea17e42bdb26101b.scn"]
 
 [params]
 

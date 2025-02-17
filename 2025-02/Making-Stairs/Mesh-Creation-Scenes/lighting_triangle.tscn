@@ -1,0 +1,87 @@
+[gd_scene load_steps=10 format=3 uid="uid://cio3r8gmurcjw"]
+
+[ext_resource type="Script" path="res://2025-02/Making-Stairs/Scripts/triangle_mesh.gd" id="1_28sq2"]
+[ext_resource type="Texture2D" uid="uid://bwm3chclmoo0x" path="res://addons/devblocks/textures/dark/texture_01.png" id="2_w01ec"]
+[ext_resource type="PackedScene" uid="uid://dj26sacnhty4r" path="res://addons/devblocks/blocks/basic_block.tscn" id="3_hy2u1"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_jqrpw"]
+vertex_color_use_as_albedo = true
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_33c2s"]
+_surfaces = [{
+"aabb": AABB(-1, 0, 0, 2, 1.73205, 1e-05),
+"attribute_data": PackedByteArray(255, 255, 255, 255, 0, 0, 128, 191, 0, 0, 0, 0, 255, 255, 255, 255, 0, 0, 0, 0, 215, 179, 221, 63, 255, 255, 255, 255, 0, 0, 128, 63, 0, 0, 0, 0),
+"format": 34359738393,
+"material": SubResource("StandardMaterial3D_jqrpw"),
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 3,
+"vertex_data": PackedByteArray(0, 0, 128, 191, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 215, 179, 221, 63, 0, 0, 0, 0, 0, 0, 128, 63, 0, 0, 0, 0, 0, 0, 0, 0)
+}]
+
+[sub_resource type="Animation" id="Animation_mbmk2"]
+resource_name = "light_move"
+length = 4.0
+tracks/0/type = "position_3d"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = PackedFloat32Array(0, 1, 3, 0.866, 0.25, 4, 1, -3, 0.866, 0.25)
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_r7h45"]
+_data = {
+"light_move": SubResource("Animation_mbmk2")
+}
+
+[sub_resource type="SphereMesh" id="SphereMesh_icglo"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_685ag"]
+emission_enabled = true
+emission = Color(0.958794, 0.945246, 0.677845, 1)
+emission_energy_multiplier = 0.3
+
+[node name="Node3D" type="Node3D"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+mesh = SubResource("ArrayMesh_33c2s")
+script = ExtResource("1_28sq2")
+texture = ExtResource("2_w01ec")
+
+[node name="label_v1" type="Label3D" parent="MeshInstance3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 0, 0.2)
+text = "v1"
+
+[node name="label_v2" type="Label3D" parent="MeshInstance3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.732, 0.2)
+text = "v2"
+
+[node name="label_v3" type="Label3D" parent="MeshInstance3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 0.2)
+text = "v3"
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.55891, 2.22057)
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.18483, 5.85501)
+shadow_enabled = true
+
+[node name="OmniLight3D" type="OmniLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, -1, 0, 0, 0, -1, 3, 0.866, 1)
+shadow_enabled = true
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="OmniLight3D"]
+libraries = {
+"": SubResource("AnimationLibrary_r7h45")
+}
+autoplay = "light_move"
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="OmniLight3D"]
+transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 0, 0, 0)
+mesh = SubResource("SphereMesh_icglo")
+surface_material_override/0 = SubResource("StandardMaterial3D_685ag")
+
+[node name="Floor" parent="." instance=ExtResource("3_hy2u1")]
+transform = Transform3D(100, 0, 0, 0, 1, 0, 0, 0, 100, 0, -0.75, 0)
