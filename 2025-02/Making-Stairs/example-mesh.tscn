@@ -1,0 +1,15 @@
+[gd_scene load_steps=2 format=3 uid="uid://bf2bnpwgxkwpl"]
+
+[ext_resource type="PackedScene" uid="uid://dj26sacnhty4r" path="res://addons/devblocks/blocks/basic_block.tscn" id="1_y88td"]
+
+[node name="example-stairs" type="Node3D"]
+
+[node name="Floor" parent="." instance=ExtResource("1_y88td")]
+transform = Transform3D(100, 0, 0, 0, 1, 0, 0, 0, 100, 0, 0.5, 0)
+block_style = 6
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(-0.851049, 0, -0.525086, 0, 1, 0, 0.525086, 0, -0.851049, -1.83755, 2.63597, -4.36015)
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(-0.158017, -0.860608, -0.484133, -0.683013, -0.258818, 0.683013, -0.713109, 0.438597, -0.546908, 0.000202537, 0.00782371, -0.4096)

@@ -23,6 +23,10 @@ window/size/window_width_override=1920
 window/size/window_height_override=1080
 window/stretch/mode="viewport"
 
+[filesystem]
+
+import/fbx/enabled=false
+
 [rendering]
 
 lights_and_shadows/directional_shadow/soft_shadow_filter_quality=4

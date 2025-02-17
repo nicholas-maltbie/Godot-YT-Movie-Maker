@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://k3jd1eivph37"]
+
+[ext_resource type="Script" path="res://2025-02/Making-Stairs/Scripts/triangle_mesh.gd" id="1_h5bc6"]
+
+[node name="Node3D" type="Node3D"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+script = ExtResource("1_h5bc6")
