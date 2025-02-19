@@ -1,0 +1,66 @@
+[gd_scene load_steps=8 format=3 uid="uid://csn6dlyn763xt"]
+
+[ext_resource type="Texture2D" uid="uid://bwm3chclmoo0x" path="res://addons/devblocks/textures/dark/texture_01.png" id="1_h0th4"]
+[ext_resource type="Script" path="res://2025-02/Making-Stairs/Scripts/square_mesh.gd" id="2_ynpx6"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_vs5wx"]
+albedo_texture = ExtResource("1_h0th4")
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_l5if4"]
+_surfaces = [{
+"aabb": AABB(-1, -1, 0, 2, 2, 1e-05),
+"attribute_data": PackedByteArray(0, 0, 128, 191, 0, 0, 128, 191, 0, 0, 128, 191, 0, 0, 128, 63, 0, 0, 128, 63, 0, 0, 128, 63, 0, 0, 128, 63, 0, 0, 128, 63, 0, 0, 128, 63, 0, 0, 128, 191, 0, 0, 128, 191, 0, 0, 128, 191),
+"format": 34359738391,
+"material": SubResource("StandardMaterial3D_vs5wx"),
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 6,
+"vertex_data": PackedByteArray(0, 0, 128, 191, 0, 0, 128, 191, 0, 0, 0, 0, 0, 0, 128, 191, 0, 0, 128, 63, 0, 0, 0, 0, 0, 0, 128, 63, 0, 0, 128, 63, 0, 0, 0, 0, 0, 0, 128, 63, 0, 0, 128, 63, 0, 0, 0, 0, 0, 0, 128, 63, 0, 0, 128, 191, 0, 0, 0, 0, 0, 0, 128, 191, 0, 0, 128, 191, 0, 0, 0, 0, 255, 127, 255, 127, 255, 127, 0, 128, 255, 127, 255, 127, 255, 127, 0, 128, 255, 127, 255, 127, 255, 127, 0, 128, 255, 127, 255, 127, 255, 127, 0, 128, 255, 127, 255, 127, 255, 127, 0, 128, 255, 127, 255, 127, 255, 127, 0, 128)
+}]
+
+[sub_resource type="Animation" id="Animation_bg25m"]
+resource_name = "square_rotate"
+length = 8.0
+tracks/0/type = "rotation_3d"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = PackedFloat32Array(0, 1, 0, 0, 0, 1, 2, 1, 0, 0, 0, 1, 3, 1, 0, -0.5, 0, 0.866, 5, 1, 0, 0.5, 0, 0.866, 6, 1, 0, 0, 0, 1)
+
+[sub_resource type="Animation" id="Animation_1lqwt"]
+resource_name = "triangle_rotate"
+length = 8.0
+tracks/0/type = "rotation_3d"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = PackedFloat32Array(0, 1, 0, 0, 0, 1, 2, 1, 0, 0, 0, 1, 3, 1, 0, -0.5, 0, 0.866, 5, 1, 0, 0.5, 0, 0.866, 6, 1, 0, 0, 0, 1)
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_1iar4"]
+_data = {
+"square_rotate": SubResource("Animation_bg25m"),
+"triangle_rotate": SubResource("Animation_1lqwt")
+}
+
+[node name="Node3D" type="Node3D"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+mesh = SubResource("ArrayMesh_l5if4")
+script = ExtResource("2_ynpx6")
+texture = ExtResource("1_h0th4")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="MeshInstance3D"]
+libraries = {
+"": SubResource("AnimationLibrary_1iar4")
+}
+autoplay = "triangle_rotate"
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 2.25)
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.18483, 5.85501)

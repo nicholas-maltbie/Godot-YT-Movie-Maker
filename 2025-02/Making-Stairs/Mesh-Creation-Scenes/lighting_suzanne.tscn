@@ -1,8 +1,14 @@
-[gd_scene load_steps=8 format=3 uid="uid://dqwgjxlg2qr28"]
+[gd_scene load_steps=11 format=3 uid="uid://dqwgjxlg2qr28"]
 
+[ext_resource type="Texture2D" uid="uid://bwm3chclmoo0x" path="res://addons/devblocks/textures/dark/texture_01.png" id="1_gsy5a"]
 [ext_resource type="ArrayMesh" uid="uid://ck8pua24x5ov1" path="res://2025-02/Making-Stairs/suzanne-mesh.res" id="1_ruhab"]
 [ext_resource type="Script" path="res://2025-02/Making-Stairs/Scripts/mesh_normals.gd" id="2_vefv7"]
 [ext_resource type="PackedScene" uid="uid://dj26sacnhty4r" path="res://addons/devblocks/blocks/basic_block.tscn" id="3_gejd1"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_mqcic"]
+albedo_texture = ExtResource("1_gsy5a")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_08clc"]
 
 [sub_resource type="Animation" id="Animation_mbmk2"]
 resource_name = "light_move"
@@ -30,8 +36,10 @@ emission_energy_multiplier = 0.3
 [node name="Node3D" type="Node3D"]
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
-transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0.5, 0)
+transform = Transform3D(0.402144, 0.0974981, -0.280668, 0.0794657, 0.419815, 0.259694, 0.286297, -0.253475, 0.322156, 0, 0.5, -0.373728)
+material_override = SubResource("StandardMaterial3D_mqcic")
 mesh = ExtResource("1_ruhab")
+surface_material_override/0 = SubResource("StandardMaterial3D_08clc")
 script = ExtResource("2_vefv7")
 
 [node name="Camera3D" type="Camera3D" parent="."]

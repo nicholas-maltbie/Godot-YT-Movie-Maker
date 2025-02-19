@@ -1,0 +1,56 @@
+[gd_scene load_steps=5 format=3 uid="uid://bex7qxa5f4y0u"]
+
+[ext_resource type="Texture2D" uid="uid://88rww8nv3bfh" path="res://2025-02/Making-Stairs/brush.png" id="2_lhrns"]
+[ext_resource type="PackedScene" uid="uid://dj26sacnhty4r" path="res://addons/devblocks/blocks/basic_block.tscn" id="3_k1wkn"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_uwdn8"]
+transparency = 1
+cull_mode = 2
+albedo_texture = ExtResource("2_lhrns")
+
+[sub_resource type="QuadMesh" id="QuadMesh_jkwvf"]
+
+[node name="Node3D" type="Node3D"]
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.55891, 2.22057)
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(0.726515, 0.371176, -0.578277, 0, 0.841558, 0.540167, 0.687151, -0.392439, 0.611404, 0, 2.18483, 5.85501)
+shadow_enabled = true
+
+[node name="Floor" parent="." instance=ExtResource("3_k1wkn")]
+transform = Transform3D(100, 0, 0, 0, 1, 0, 0, 0, 100, 0, -0.75, 0)
+
+[node name="Bush" type="Node3D" parent="."]
+transform = Transform3D(-0.217564, 0, 0.976046, 0, 1, 0, -0.976046, 0, -0.217564, 0, 0.1, 0)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Bush"]
+transform = Transform3D(0.999981, -0.00500633, -0.00373219, 0.00498397, 0.99997, -0.00597969, 0.00376201, 0.00596097, 0.999975, 0, 0, 0)
+material_override = SubResource("StandardMaterial3D_uwdn8")
+mesh = SubResource("QuadMesh_jkwvf")
+skeleton = NodePath("../../DirectionalLight3D")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="Bush"]
+transform = Transform3D(0.771445, 0.242433, -0.588302, 0.0125142, 0.918613, 0.394961, 0.636173, -0.312053, 0.705625, -0.0800322, 0, 0.127368)
+material_override = SubResource("StandardMaterial3D_uwdn8")
+mesh = SubResource("QuadMesh_jkwvf")
+skeleton = NodePath("../../DirectionalLight3D")
+
+[node name="MeshInstance3D3" type="MeshInstance3D" parent="Bush"]
+transform = Transform3D(0.678462, -0.297957, 0.671499, 0.0125142, 0.918613, 0.394961, -0.734529, -0.259563, 0.626973, 0.134368, 0, 0.0612883)
+material_override = SubResource("StandardMaterial3D_uwdn8")
+mesh = SubResource("QuadMesh_jkwvf")
+skeleton = NodePath("../../DirectionalLight3D")
+
+[node name="MeshInstance3D4" type="MeshInstance3D" parent="Bush"]
+transform = Transform3D(-0.953796, -0.107618, 0.280522, 0.0125142, 0.918612, 0.394961, -0.300195, 0.380223, -0.874822, 0.00511968, 0, -0.125053)
+material_override = SubResource("StandardMaterial3D_uwdn8")
+mesh = SubResource("QuadMesh_jkwvf")
+skeleton = NodePath("../../DirectionalLight3D")
+
+[node name="MeshInstance3D5" type="MeshInstance3D" parent="Bush"]
+transform = Transform3D(-0.254116, 0.234789, -0.938243, -0.0282922, 0.967867, 0.249865, 0.96676, 0.0900398, -0.239308, 0.00511968, 0, -0.125053)
+material_override = SubResource("StandardMaterial3D_uwdn8")
+mesh = SubResource("QuadMesh_jkwvf")
+skeleton = NodePath("../../DirectionalLight3D")
