@@ -1,0 +1,485 @@
+[gd_scene load_steps=7 format=3 uid="uid://oarilm1aocs5"]
+
+[ext_resource type="PackedScene" uid="uid://dj26sacnhty4r" path="res://addons/devblocks/blocks/basic_block.tscn" id="1_1je6w"]
+[ext_resource type="Script" path="res://2025-02/Making-Stairs/Scripts/stairs_skip.gd" id="2_58c3s"]
+[ext_resource type="Texture2D" uid="uid://bwm3chclmoo0x" path="res://addons/devblocks/textures/dark/texture_01.png" id="3_203wy"]
+
+[sub_resource type="Animation" id="Animation_nv7qj"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("step_1:top_color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("step_1:side_color")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("step_1:front_color")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("step_2:top_color")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("step_2:front_color")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("step_3:top_color")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("step_3:side_color")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("step_3:front_color")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("step_4:top_color")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("step_4:side_color")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/10/type = "value"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("step_4:front_color")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/11/type = "value"
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/path = NodePath("step_5:top_color")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/12/type = "value"
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/path = NodePath("step_5:side_color")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/13/type = "value"
+tracks/13/imported = false
+tracks/13/enabled = true
+tracks/13/path = NodePath("step_5:front_color")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/14/type = "value"
+tracks/14/imported = false
+tracks/14/enabled = true
+tracks/14/path = NodePath("step_5:back_color")
+tracks/14/interp = 1
+tracks/14/loop_wrap = true
+tracks/14/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/15/type = "value"
+tracks/15/imported = false
+tracks/15/enabled = true
+tracks/15/path = NodePath("step_2:side_color")
+tracks/15/interp = 1
+tracks/15/loop_wrap = true
+tracks/15/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_6cy0m"]
+resource_name = "stairs_steps_highlight"
+length = 60.0
+step = 0.2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("step_1:top_color")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(7, 7.2, 7.8, 12.6, 13, 15.6, 16),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 0, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(0, 1, 0, 1), Color(0, 1, 0, 1), Color(1, 1, 1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("step_1:side_color")
+tracks/1/interp = 2
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(7, 7.4, 7.8, 15.6, 16, 18.6, 19),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 0, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 0, 0, 1), Color(1, 0, 0, 1), Color(1, 1, 1, 1)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("step_1:front_color")
+tracks/2/interp = 2
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(7, 7.4, 7.8, 10, 10.4, 12.6, 13),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 0, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(0, 1, 1, 1), Color(0, 1, 1, 1), Color(1, 1, 1, 1)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("step_2:top_color")
+tracks/3/interp = 2
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(7.4, 7.8, 8.2, 27.6, 28, 31.6, 32),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 0, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(0, 1, 0, 1), Color(0, 1, 0, 1), Color(1, 1, 1, 1)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("step_2:front_color")
+tracks/4/interp = 2
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(7.4, 7.8, 8.2, 21.6, 22, 27.6, 28),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 0, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(0, 1, 1, 1), Color(0, 1, 1, 1), Color(1, 1, 1, 1)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("step_3:top_color")
+tracks/5/interp = 2
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(7.8, 8.2, 8.6, 38, 38.6, 39.2),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 0, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 0, 1), Color(1, 1, 1, 1)]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("step_3:side_color")
+tracks/6/interp = 2
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(7.8, 8.2, 8.6, 38, 38.6, 39.2),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 0, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 0, 1), Color(1, 1, 1, 1)]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("step_3:front_color")
+tracks/7/interp = 2
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(7.8, 8.2, 8.6, 38, 38.6, 39.2),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 0, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 0, 1), Color(1, 1, 1, 1)]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("step_4:top_color")
+tracks/8/interp = 2
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(8.2, 8.6, 9, 39.2, 39.8, 40.4),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 0, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 0, 1), Color(1, 1, 1, 1)]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("step_4:side_color")
+tracks/9/interp = 2
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(8.2, 8.6, 9, 39.2, 39.8, 40.4),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 0, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 0, 1), Color(1, 1, 1, 1)]
+}
+tracks/10/type = "value"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("step_4:front_color")
+tracks/10/interp = 2
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"times": PackedFloat32Array(8.2, 8.6, 9, 39.2, 39.8, 40.4),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 0, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 0, 1), Color(1, 1, 1, 1)]
+}
+tracks/11/type = "value"
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/path = NodePath("step_5:top_color")
+tracks/11/interp = 2
+tracks/11/loop_wrap = true
+tracks/11/keys = {
+"times": PackedFloat32Array(8.6, 9, 9.4, 40.4, 41, 41.6),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 0, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 0, 1), Color(1, 1, 1, 1)]
+}
+tracks/12/type = "value"
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/path = NodePath("step_5:side_color")
+tracks/12/interp = 2
+tracks/12/loop_wrap = true
+tracks/12/keys = {
+"times": PackedFloat32Array(8.6, 9, 9.4, 40.4, 41, 41.6),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 0, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 0, 1), Color(1, 1, 1, 1)]
+}
+tracks/13/type = "value"
+tracks/13/imported = false
+tracks/13/enabled = true
+tracks/13/path = NodePath("step_5:front_color")
+tracks/13/interp = 2
+tracks/13/loop_wrap = true
+tracks/13/keys = {
+"times": PackedFloat32Array(8.6, 9, 9.4, 40.4, 41, 41.6),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 0, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 0, 1), Color(1, 1, 1, 1)]
+}
+tracks/14/type = "value"
+tracks/14/imported = false
+tracks/14/enabled = true
+tracks/14/path = NodePath("step_5:back_color")
+tracks/14/interp = 2
+tracks/14/loop_wrap = true
+tracks/14/keys = {
+"times": PackedFloat32Array(8.6, 9, 9.4, 40.4, 41, 41.6, 43, 43.6, 47.6, 48),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 0, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 0, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 0, 1, 1), Color(1, 0, 1, 1), Color(1, 1, 1, 1)]
+}
+tracks/15/type = "value"
+tracks/15/imported = false
+tracks/15/enabled = true
+tracks/15/path = NodePath("step_2:side_color")
+tracks/15/interp = 2
+tracks/15/loop_wrap = true
+tracks/15/keys = {
+"times": PackedFloat32Array(7.4, 7.8, 8.2, 31.6, 32, 35, 35.4),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 0, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 0, 0, 1), Color(1, 0, 0, 1), Color(1, 1, 1, 1)]
+}
+tracks/16/type = "rotation_3d"
+tracks/16/imported = false
+tracks/16/enabled = true
+tracks/16/path = NodePath("Camera3D")
+tracks/16/interp = 1
+tracks/16/loop_wrap = true
+tracks/16/keys = PackedFloat32Array(0, 1, -0.089, 0.908, 0.243, 0.33, 17, 1, -0.0889851, 0.907848, 0.242959, 0.329945, 17.6, 1, 0.109803, 0.87363, 0.234288, -0.412096, 18.2, 1, 0.109803, 0.87363, 0.234288, -0.412096, 18.6, 1, -0.0889851, 0.907848, 0.242959, 0.329945, 32, 1, -0.0889851, 0.907848, 0.242959, 0.329945, 32.6, 1, -0.199659, 0.616237, 0.164572, 0.743844, 35, 1, -0.199659, 0.616237, 0.164572, 0.743844, 35.4, 1, -0.0889851, 0.907848, 0.242959, 0.329945, 37.6, 1, -0.0889851, 0.907848, 0.242959, 0.329945, 38, 1, -0.089, 0.908, 0.243, 0.33, 42, 1, -0.089, 0.908, 0.243, 0.33, 43, 1, -0.245499, 0.307355, 0.0817189, 0.915743, 48, 1, -0.245499, 0.307355, 0.0817189, 0.915743, 49, 1, -0.089, 0.908, 0.243, 0.33)
+tracks/17/type = "position_3d"
+tracks/17/imported = false
+tracks/17/enabled = true
+tracks/17/path = NodePath("Camera3D")
+tracks/17/interp = 1
+tracks/17/loop_wrap = true
+tracks/17/keys = PackedFloat32Array(10, 1, 1.17704, 0.988168, -0.23979, 10.4, 1, 0.67704, 0.488168, -0.23979, 17, 1, 0.67704, 0.488168, -0.23979, 17.6, 1, -0.761429, 0.488168, -0.148955, 18.2, 1, -0.761429, 0.488168, -0.148955, 18.6, 1, 0.67704, 0.488168, -0.23979, 21.6, 1, 0.67704, 0.488168, -0.23979, 22, 1, 0.67704, 0.759418, 0.210906, 32, 1, 0.67704, 0.759418, 0.210906, 32.6, 1, 1.17704, 0.759418, 0.710906, 35, 1, 1.17704, 0.759418, 0.710906, 35.4, 1, 0.67704, 0.759418, 0.210906, 37.6, 1, 0.67704, 0.759418, 0.210906, 38, 1, 1.17704, 0.988168, -0.23979, 42, 1, 1.17704, 0.988168, -0.23979, 43, 1, 1.01599, 1.51514, 3.03621, 48, 1, 1.01599, 1.51514, 3.03621, 49, 1, 1.17704, 0.988168, -0.23979)
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_u817n"]
+_data = {
+"RESET": SubResource("Animation_nv7qj"),
+"stairs_steps_highlight": SubResource("Animation_6cy0m")
+}
+
+[node name="Staicase-highlight-steps" type="Node3D"]
+
+[node name="BasicBlock" parent="." instance=ExtResource("1_1je6w")]
+transform = Transform3D(100, 0, 0, 0, 1, 0, 0, 0, 100, 0, -0.5, 0)
+block_style = 6
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(-0.530851, -0.462034, 0.710438, 5.25093e-09, 0.838309, 0.545196, -0.847465, 0.289418, -0.445017, 0, 0, 0)
+light_indirect_energy = 5.0
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(-0.766436, -0.321896, 0.55584, -0.00124358, 0.866105, 0.499861, -0.64232, 0.38242, -0.664214, 1.17704, 0.988168, -0.23979)
+
+[node name="step_1" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5, 0, 0)
+script = ExtResource("2_58c3s")
+num_step = 1
+step_height = 0.25
+step_depth = 0.5
+include_back_face = false
+texture = ExtResource("3_203wy")
+
+[node name="step_2" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5, 0, 0)
+script = ExtResource("2_58c3s")
+num_step = 2
+skip_step = 1
+step_height = 0.25
+step_depth = 0.5
+include_back_face = false
+texture = ExtResource("3_203wy")
+back_color = Color(1, 1, 1, 1)
+
+[node name="step_3" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5, 0, 0)
+script = ExtResource("2_58c3s")
+num_step = 3
+skip_step = 2
+step_height = 0.25
+step_depth = 0.5
+include_back_face = false
+texture = ExtResource("3_203wy")
+
+[node name="step_4" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5, 0, 0)
+script = ExtResource("2_58c3s")
+num_step = 4
+skip_step = 3
+step_height = 0.25
+step_depth = 0.5
+include_back_face = false
+texture = ExtResource("3_203wy")
+
+[node name="step_5" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5, 0, 0)
+script = ExtResource("2_58c3s")
+num_step = 5
+skip_step = 4
+step_height = 0.25
+step_depth = 0.5
+texture = ExtResource("3_203wy")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_u817n")
+}
+autoplay = "stairs_steps_highlight"

@@ -1,2 +1,2 @@
-godot res://2025-02/Making-Stairs/Mesh-Creation-Scenes/triangle-backface-culling.tscn --quit-after $(60 * 60) --write-movie tmp/triangle-backface-culling.png
-ffmpeg -framerate 60 -i 'tmp\triangle-backface-culling%08d.png' -c:v ffv1 tmp\triangle-backface-culling.avi
+godot res://2025-02/Making-Stairs/Staircase-Creation-Scenes/staicase-highlight-steps.tscn --quit-after $(60 * 60) --write-movie tmp/staicase-highlight-steps.png
+ffmpeg -framerate 60 -i 'tmp\staicase-highlight-steps%08d.png' -c:v ffv1 tmp\staicase-highlight-steps.avi
